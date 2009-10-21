@@ -5,8 +5,8 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "parsing-utils"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = %Q{Some classes useful for parsing matters (especially to select a parser based on a given mime type)}
+    gem.description = %Q{Some classes useful for parsing matters (especially to select a parser based on a given mime type)}
     gem.email = "cyril.rohr@gmail.com"
     gem.homepage = "http://github.com/crohr/parsing-utils"
     gem.authors = ["Cyril Rohr"]
