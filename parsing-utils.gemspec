@@ -23,6 +23,9 @@ Gem::Specification.new do |s|
      "README.rdoc",
      "Rakefile",
      "VERSION",
+     "lib/parsing_utils.rb",
+     "parsing-utils.gemspec",
+     "spec/parsing_utils_spec.rb",
      "spec/spec_helper.rb"
   ]
   s.homepage = %q{http://github.com/crohr/parsing-utils}
