@@ -51,5 +51,23 @@ module ParsingUtils
       end
     end
   end
+  
+  
+  class IdentityParser
+    class << self
+      attr_accessor :supported_mime_types
+      def dependencies
+      end
+      def default_mime_type
+        'text/plain'
+      end
+      def dump(object, options = {})
+        object
+      end
+      def load(object, options = {})
+        object
+      end
+    end
+  end
 
 end

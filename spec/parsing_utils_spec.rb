@@ -29,4 +29,22 @@ describe ParsingUtils do
     end
   end
   
+  describe ParsingUtils::IdentityParser do
+    it "should behave like a parser" do
+      ParsingUtils::IdentityParser.default_mime_type.should == 'text/plain'
+      ParsingUtils::IdentityParser.should respond_to(:dump)
+      ParsingUtils::IdentityParser.should respond_to(:load)
+      ParsingUtils::IdentityParser.should respond_to(:dependencies)
+      ParsingUtils::IdentityParser.should respond_to(:supported_mime_types)
+      ParsingUtils::IdentityParser.should respond_to(:supported_mime_types=)
+    end
+    it "behave such as the dumped object be the same as original object" do
+      object = mock("object")
+      ParsingUtils::IdentityParser.dump(object).should == object
+    end
+    it "behave such as the loaded object be the same as original object" do
+      object = mock("object")
+      ParsingUtils::IdentityParser.load(object).should == object
+    end
+  end
 end
