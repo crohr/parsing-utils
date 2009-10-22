@@ -12,7 +12,7 @@ module ParsingUtils
       def available_parsers; @@available_parsers; end
       def add(parser, *mime_types)
         parser.dependencies
-        parser.supported_mime_types = mime_types
+        parser.supported_mime_types = [mime_types, parser.default_mime_type].flatten.compact.uniq
         @@available_parsers << parser
         self
       end
@@ -33,6 +33,9 @@ module ParsingUtils
       attr_accessor :supported_mime_types
       def dependencies
         require 'json'
+      end
+      def default_mime_type
+        'application/json'
       end
       def dump(object, options = {})
         options = options.dup

@@ -28,4 +28,5 @@ describe ParsingUtils do
       ParsingUtils::JSONParser.dump(Foo.new).should == "{\"1\":3,\"3\":5}"
     end
   end
+  
 end
